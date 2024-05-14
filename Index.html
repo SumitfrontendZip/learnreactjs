@@ -8,9 +8,16 @@
 </head>
 
 <body>
-    hello
+    <div id="root"></div>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const btn = () => React.createElement("button", { id: "btn" }, React.createElement("span", {}, "submit"))
+        const rootContaniner = document.getElementById("root")
+        const root = ReactDOM.createRoot(rootContaniner);
+        root.render(btn())
+    </script>
 </body>
 
 </html>
